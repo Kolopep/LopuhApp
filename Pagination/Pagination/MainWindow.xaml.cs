@@ -101,5 +101,24 @@ namespace Pagination
         {
             RefreshPagination();
         }
+
+        private void BAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Windows.AddEditWindow addEditWindow = new Windows.AddEditWindow(new Model.Product());
+            addEditWindow.ShowDialog();
+            RefreshPagination();
+        }
+
+        private void BEdit_Click(object sender, RoutedEventArgs e)
+        {
+            if(DGData.SelectedItem is null)
+            {
+                MessageBox.Show("Select Item");
+                return;
+            }
+            Windows.AddEditWindow addEditWindow = new Windows.AddEditWindow((Model.Product)DGData.SelectedItem);
+            addEditWindow.ShowDialog();
+            RefreshPagination();
+        }
     }
 }

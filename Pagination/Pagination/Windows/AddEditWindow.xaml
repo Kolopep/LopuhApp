@@ -1,0 +1,29 @@
+﻿<Window x:Class="Pagination.Windows.AddEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pagination.Windows"
+        mc:Ignorable="d"
+        Title="AddEditWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Title" TextAlignment="Center"/>
+            <TextBox Text="{Binding Title}" Margin="5"/>
+            <TextBlock Text="Production Type" TextAlignment="Center"/>
+            <ComboBox Margin="5" DisplayMemberPath="Title" SelectedItem="{Binding ProductType}" x:Name="CBProductType"/>
+            <TextBlock Text="Article Number" TextAlignment="Center"/>
+            <TextBox Text="{Binding ArticleNumber}" Margin="5"/>
+            <TextBlock Text="Description" TextAlignment="Center"/>
+            <TextBox AcceptsReturn="True" AcceptsTab="True" Height="50" Text="{Binding Description}" Margin="5"/>
+            <TextBlock  Text="Production Person Count" TextAlignment="Center"/>
+            <TextBox Text="{Binding ProductionPersonCount}" Margin="5"/>
+            <TextBlock Text="Production Workshop Number" TextAlignment="Center"/>
+            <TextBox Text="{Binding ProductionWorkshopNumber}" Margin="5"/>
+            <TextBlock Text="Min Cost For Agent" TextAlignment="Center"/>
+            <TextBox Text="{Binding MinCostForAgent}" Margin="5"/>
+            <Button x:Name="BSave" Click="BSave_Click" Content="Save" Margin="5"/>
+            <Button x:Name="BDelete" Click="BDelete_Click" Content="Delete" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

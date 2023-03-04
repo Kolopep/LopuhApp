@@ -17,6 +17,8 @@
             <ComboBox SelectedIndex="0" SelectionChanged="CBNumberWrite_SelectionChanged" x:Name="CBNumberWrite" Margin="5"/>
             <TextBlock Margin="5" VerticalAlignment="Center" Text="Тип продукта: "/>
             <ComboBox Margin="5" SelectedIndex="0" SelectionChanged="CBProductType_SelectionChanged" DisplayMemberPath="Title" x:Name="CBProductType"/>
+            <Button x:Name="BAdd" Content="Add" Click="BAdd_Click" Margin="5" Width="150"/>
+            <Button x:Name="BEdit" Content="Edit" Click="BEdit_Click" Margin="5" Width="150"/>
         </WrapPanel>
         <DataGrid Grid.Row="1" Margin="5" x:Name="DGData" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False">
             <DataGrid.Columns>
